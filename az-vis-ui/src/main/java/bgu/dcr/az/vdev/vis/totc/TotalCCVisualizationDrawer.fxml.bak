@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="canvas" xmlns:fx="http://javafx.com/fxml" fx:controller="bgu.dcr.az.vdev.vis.totc.TotalCCVisualizationDrawer">
+  <children>
+    <StackedBarChart fx:id="chart" animated="false" prefWidth="600.0" title="Total CC (partition by message handle usage)" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <xAxis>
+        <CategoryAxis id="xAxis1" fx:id="xAxis" label="Agent" side="BOTTOM" style="-fx-text-fill:white;" tickLabelFill="WHITE">
+          <categories>
+            <FXCollections fx:factory="observableArrayList" />
+          </categories>
+        </CategoryAxis>
+      </xAxis>
+      <yAxis>
+        <NumberAxis id="yAxis1" label="CC Used" side="LEFT" style="-fx-text-fill:white;-fx-fill:white;" tickLabelFill="WHITE" />
+      </yAxis>
+    </StackedBarChart>
+  </children>
+  <stylesheets>
+    <URL value="@../ngr/__netg.css" />
+    <URL value="@__totc.css" />
+  </stylesheets>
+</AnchorPane>

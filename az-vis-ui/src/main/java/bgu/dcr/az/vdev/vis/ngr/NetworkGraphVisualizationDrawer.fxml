@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="canvas" xmlns:fx="http://javafx.com/fxml" fx:controller="bgu.dcr.az.vdev.vis.ngr.NetworkGraphVisualizationDrawer">
+  <children>
+    <VBox id="vBox1" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <LineChart fx:id="chart" animated="false" createSymbols="false" title="Network Load Graph" VBox.vgrow="ALWAYS">
+          <xAxis>
+            <NumberAxis id="xAxis1" fx:id="xAxis" animated="false" autoRanging="false" forceZeroInRange="false" label="Frame" minorTickCount="0" minorTickVisible="false" tickLabelFill="WHITE" tickLength="5.0" tickUnit="3.0" />
+          </xAxis>
+          <yAxis>
+            <NumberAxis id="yAxis1" fx:id="yAxis" animated="false" autoRanging="false" label="Messages On Network Lines" side="LEFT" tickLabelFill="WHITE" />
+          </yAxis>
+        </LineChart>
+      </children>
+    </VBox>
+  </children>
+  <stylesheets>
+    <URL value="@__netg.css" />
+  </stylesheets>
+</AnchorPane>

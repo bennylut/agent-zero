@@ -1,0 +1,35 @@
+<experiment>
+   	<async-test name="Traffic Light Coordination (taxation)"  seed="0" repeat-count="100" run-var="n" start="6" end="20" tick-size="2">
+        <algorithm name="K-ary SyncABB"/>
+        <bgsf-adcop-pg n="6" max-cost="100" im="taxation" />
+        
+        <ppne-sc/>
+        <poc-sc/>
+        <sw-sc/>
+        
+        <nccc-sc/>
+        
+        <has-init-pne-ct />
+    </async-test>
+
+    <async-test name="Traffic Light Coordination (side-payments)"  seed="0" repeat-count="100" run-var="n" start="6" end="20" tick-size="2">
+        <algorithm name="K-ary SyncABB"/>
+        <bgsf-adcop-pg n="6" max-cost="100" im="side-payments" />
+
+        <ppne-sc/>
+        <poc-sc/>
+        <sw-sc/>        
+        
+        <nccc-sc/>
+        
+        <has-init-pne-ct />
+    </async-test>
+    
+    <!-- 
+select TEST, RVAR, avg(VALUE) as AVG
+from POTSTATISTIC
+where EXECUTION_NUMBER in (select EXECUTION_NUMBER from POTSTATISTIC group by EXECUTION_NUMBER having count(TEST) > 1)
+group by TEST, RVAR 
+-->
+    
+</experiment>

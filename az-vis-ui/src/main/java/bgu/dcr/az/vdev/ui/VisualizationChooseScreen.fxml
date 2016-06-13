@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+<?scenebuilder-stylesheet ../../../../../azdevjfx/azVis.css?>
+
+<VBox fx:id="root" prefHeight="639.0" prefWidth="898.0" styleClass="screen-back" xmlns:fx="http://javafx.com/fxml" fx:controller="bgu.dcr.az.vdev.ui.VisualizationChooseScreen">
+  <children>
+    <GridPane id="gridPane2" VBox.vgrow="ALWAYS">
+      <children>
+        <Label id="label1" prefWidth="9.9999999999999E13" style="-fx-background-color: rgb(51,51,51); -fx-padding: 5;" text="Select Visualization" textFill="WHITE" GridPane.columnIndex="0" GridPane.columnSpan="2147483647" GridPane.rowIndex="0" />
+        <ListView id="listView1" fx:id="vmetaList" prefWidth="200.0" styleClass="vlist" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <GridPane id="gridPane1" prefWidth="698.0" styleClass="visualization-choose-panel" GridPane.columnIndex="1" GridPane.rowIndex="1">
+          <children>
+            <HBox id="HBox" alignment="CENTER" cacheHint="SPEED" maxHeight="64.0" maxWidth="64.0" prefHeight="64.0" prefWidth="64.0" styleClass="visualization-selected-image-wrapper" GridPane.columnIndex="0" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="0" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+              <children>
+                <ImageView id="emptyImageView1" fx:id="selectedVisualizationImage" fitHeight="64.0" fitWidth="64.0" smooth="false" styleClass="visualization-selected-image">
+                  <image>
+                    <Image url="@../../../../../resources/img/camera.png" preserveRatio="false" smooth="false" />
+                  </image>
+                </ImageView>
+              </children>
+              <effect>
+                <DropShadow color="#fffdcc" />
+              </effect>
+            </HBox>
+            <VBox id="hBox2" prefWidth="200.0" styleClass="information" GridPane.columnIndex="0" GridPane.rowIndex="1">
+              <children>
+                <Label id="label3" fx:id="visualizationNameLabel" text="Visualization Name" textFill="WHITE">
+                  <effect>
+                    <Bloom />
+                  </effect>
+                  <font>
+                    <Font name="Consolas Bold" size="16.0" />
+                  </font>
+                </Label>
+                <WebView fx:id="currentVisualizationDescription" blendMode="SRC_OVER" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+              </children>
+              <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
+              </padding>
+              <GridPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+              </GridPane.margin>
+            </VBox>
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints prefHeight="94.0" vgrow="NEVER" />
+            <RowConstraints vgrow="ALWAYS" />
+          </rowConstraints>
+        </GridPane>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="NEVER" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints fillHeight="false" vgrow="NEVER" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+    <GridPane id="gridPane3" maxHeight="220.0" prefHeight="220.0" style="-fx-background-color:rgb(51,51,51);" styleClass="visualization-execution-choose-panel" VBox.vgrow="NEVER">
+      <children>
+        <Label id="label1" prefWidth="9.9999999999999E13" style="-fx-background-color: rgb(31,31,31); -fx-padding: 5;-fx-border-color:white transparent transparent transparent;" text="Select Execution" textFill="WHITE" GridPane.columnIndex="0" GridPane.columnSpan="2147483647" GridPane.rowIndex="0" />
+        <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" style="-fx-padding: 5px;" GridPane.columnIndex="0" GridPane.rowIndex="1">
+          <children>
+            <Label id="label2" minWidth="100.0" text="Test Name" textFill="WHITE">
+              <graphic>
+                <ImageView>
+                  <Image url="@../../../../../resources/img/avt-test-32.png" preserveRatio="true" smooth="true" />
+                </ImageView>
+              </graphic>
+            </Label>
+            <ComboBox id="comboBox1" fx:id="availableTests" prefWidth="150.0">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Item 1" />
+                  <String fx:value="Item 2" />
+                  <String fx:value="Item 3" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+          </children>
+        </HBox>
+        <HBox id="HBox" alignment="CENTER" spacing="5.0" style="-fx-padding: 5;" GridPane.columnIndex="0" GridPane.columnSpan="1" GridPane.rowIndex="3">
+          <children>
+            <Label id="label2" text="Execution Number" textFill="WHITE" />
+            <Slider id="sliderHorizontal1" fx:id="executionSelectionSlider" blockIncrement="1.0" minorTickCount="25" prefWidth="150.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" styleClass="execution-select-slider" HBox.hgrow="ALWAYS" />
+            <TextField id="textField1" fx:id="executionSelectionText" alignment="CENTER" prefWidth="40.0" text="142" />
+          </children>
+        </HBox>
+        <GridPane id="hBox2" fx:id="currentExecutionInformation" maxHeight="95.0" prefHeight="95.0" vgap="5.0" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.vgrow="ALWAYS">
+          <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+          </GridPane.margin>
+        </GridPane>
+        <VBox id="VBox" alignment="CENTER" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <VBox id="vBox1" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" style="-fx-background-color: rgb(21,21,21);-fx-border-color:white transparent transparent transparent;" GridPane.columnIndex="1" GridPane.columnSpan="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.rowSpan="5" GridPane.valignment="CENTER">
+          <children>
+            <Button id="start-play-button" fx:id="playButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="48.0" styleClass="big-media-control" textFill="WHITE">
+              <graphic>
+                <ImageView>
+                  <Image url="@../../../../../resources/img/but-play-48.png" preserveRatio="true" smooth="true" />
+                </ImageView>
+              </graphic>
+            </Button>
+            <Label id="label4" style="-fx-text-fill: white;" text="Start Playing" />
+          </children>
+        </VBox>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="-Infinity" prefWidth="120.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+      </rowConstraints>
+    </GridPane>
+  </children>
+  <stylesheets>
+    <URL value="@../../../../../azdevjfx/azVis.css" />
+  </stylesheets>
+</VBox>

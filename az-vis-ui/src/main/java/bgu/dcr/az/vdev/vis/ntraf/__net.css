@@ -1,0 +1,34 @@
+/* 
+    Document   : __net.css
+    Created on : May 13, 2012, 11:23:41 PM
+    Author     : Administrator
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+.canvas {
+    -fx-background-color: rgba(51,51,51,0.6);
+}
+
+.lagend{
+    -fx-border-color: rgb(91,91,91);
+    -fx-background-color: rgba(0,0,0,0.5);
+}
+
+.lagend > .title {
+    -fx-background-color: rgb(153,0,0);
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-padding: 3;
+}
+
+.lagend > *.content {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 5;
+}
+

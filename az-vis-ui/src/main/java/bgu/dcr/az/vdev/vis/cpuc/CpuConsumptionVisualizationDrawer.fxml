@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="canvas" xmlns:fx="http://javafx.com/fxml" fx:controller="bgu.dcr.az.vdev.vis.cpuc.CpuConsumptionVisualizationDrawer">
+  <children>
+    <VBox id="vBox1" fx:id="cpuPan" minWidth="144.0" prefHeight="128.0" prefWidth="144.0" styleClass="cpu-box" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0">
+      <padding>
+        <Insets left="10.0" />
+      </padding>
+    </VBox>
+    <TilePane id="tilePane1" fx:id="back" alignment="CENTER" hgap="10.0" prefHeight="400.0" prefWidth="600.0" vgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+      </padding>
+    </TilePane>
+  </children>
+  <stylesheets>
+    <URL value="@__cpuc.css" />
+  </stylesheets>
+</AnchorPane>

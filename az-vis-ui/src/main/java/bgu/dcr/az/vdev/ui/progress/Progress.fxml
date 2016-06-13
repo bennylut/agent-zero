@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="back" xmlns:fx="http://javafx.com/fxml" fx:controller="bgu.dcr.az.vdev.ui.progress.Progress">
+  <children>
+    <GridPane id="gridPane1" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <ImageView id="emptyImageView1" fitHeight="150.0" fitWidth="200.0" preserveRatio="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+          <effect>
+            <Lighting>
+              <bumpInput>
+                <Shadow />
+              </bumpInput>
+              <light>
+                <javafx.scene.effect.Light.Distant />
+              </light>
+            </Lighting>
+          </effect>
+          <image>
+            <Image url="@solving.png" preserveRatio="false" smooth="false" />
+          </image>
+        </ImageView>
+        <ImageView id="emptyImageView2" fitHeight="150.0" fitWidth="200.0" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+          <effect>
+            <Lighting>
+              <bumpInput>
+                <Shadow />
+              </bumpInput>
+              <light>
+                <javafx.scene.effect.Light.Distant />
+              </light>
+            </Lighting>
+          </effect>
+          <image>
+            <Image url="@visualizing.png" preserveRatio="false" smooth="false" />
+          </image>
+        </ImageView>
+        <Label id="label1" text="Solving" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0">
+          <effect>
+            <Bloom />
+          </effect>
+        </Label>
+        <Label id="label1" text="Visualizing" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0">
+          <effect>
+            <Bloom />
+          </effect>
+        </Label>
+        <VBox id="vBox1" fx:id="hidingBoxLeft" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.rowSpan="2" />
+        <VBox id="vBox1" fx:id="hidingBoxRight" prefHeight="400.0" prefWidth="300.0" styleClass="dark" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.rowSpan="2" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="382.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="359.0" minHeight="10.0" prefHeight="354.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </children>
+  <stylesheets>
+    <URL value="@progress.css" />
+  </stylesheets>
+</AnchorPane>

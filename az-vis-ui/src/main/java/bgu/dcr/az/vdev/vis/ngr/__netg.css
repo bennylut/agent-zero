@@ -1,0 +1,65 @@
+.canvas {
+    -fx-background-color: rgba(51,51,51,0.6);
+}
+
+.chart-title {
+    -fx-font-size: 1.4em;
+    -fx-text-fill: rgb(245,245,245);
+}
+
+.axis-label {
+    -fx-text-fill: rgb(245,245,245);
+    /*    -fx-tick-label-fill: #914800;*/
+}
+
+.chart-plot-background {
+    -fx-background-color: rgba(0,0,0,0.5);
+}
+.chart-vertical-grid-lines {
+    -fx-stroke: rgb(100,100,100);
+}
+.chart-horizontal-grid-lines {
+    -fx-stroke: rgb(100,100,100);
+}
+.chart-alternative-column-fill {
+    -fx-fill: rgba(210,233,255, 0.2);
+    -fx-stroke: transparent;
+    -fx-stroke-width: 0;
+}
+.chart-alternative-row-fill {
+    -fx-fill: rgba(210,233,255, 0.2);
+    -fx-stroke: transparent;
+    -fx-stroke-width: 0;
+}
+.chart-vertical-zero-line {
+    -fx-stroke: #999999;
+}
+.chart-horizontal-zero-line {
+    -fx-stroke: #999999;
+}
+
+/******************************** LIST ***************************************/
+.list-view {
+    -fx-background-color: rgba(0,0,0,0.3);
+    -fx-background-insets: 0;
+
+    /* There is some oddness if padding is in em values rather than pixels,
+       in particular, the left border of the control doesn't show. */
+    -fx-padding: 1; /* 0.083333em; */
+}
+
+.list-cell {
+    -fx-skin: "com.sun.javafx.scene.control.skin.ListCellSkin";
+    -fx-background-color: rgba(210,233,255, 0.2);
+    -fx-text-fill: rgb(245,245,245);
+}
+
+.list-cell:filled:selected{
+    -fx-background-color: rgba(210,233,255, 0.7);
+}
+
+
+/*.default-color0.chart-series-line {
+    -fx-background-insets: 0;
+    -fx-stroke-width: 1px;
+}*/

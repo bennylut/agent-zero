@@ -1,0 +1,248 @@
+/*******************************************************************************
+ *                                                                             *
+ * Variables                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+.root{
+    -az-property-color: rgb(170,170,220);
+    -az-console-green: rgb(153,255,153);
+    -az-console-light-blue: #d2e9ff;
+}
+
+.back{
+    -fx-background-image: url("../resources/img/bgp.png");
+    -fx-background-repeat: repeat repeat;
+}
+
+/* defaults */
+.text {
+    -fx-font-family: Consolas;
+}
+
+.text-field {
+    -fx-skin: "com.sun.javafx.scene.control.skin.TextFieldSkin";
+    -fx-background-insets: 1;
+    -fx-border-insets: 0;
+    -fx-background-radius: 5;
+    -fx-padding: 3;
+    -fx-text-fill: black;
+    -fx-border-color: rgb(71,71,71);
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+}
+
+/* screens */
+.screen-back{
+    -fx-background-color: rgb(51,51,51);
+}
+
+/* logo */
+.logo-wrap{
+    -fx-background-color: rgba(0,0,0,0.6);
+    -fx-border-color: transparent transparent white transparent;
+}
+
+
+/* Visualization List! */
+
+
+/*******************************************************************************
+ *                                                                             *
+ * Visualization Choose Screen                                                 *
+ *                                                                             *
+ ******************************************************************************/
+
+.visualization-choose-panel{
+    -fx-background-image: url("../resources/img/pattern-dark-wood.png");
+    -fx-background-repeat: repeat repeat;
+}
+
+.visualization-choose-panel > .information {
+    -fx-background-color: rgba(0,0,0,0.6);
+    -fx-background-radius: 10px;
+}
+
+.visualization-choose-panel > .information .label{
+    -fx-font-size: 18px;
+}
+
+
+.visualization-execution-choose-panel > .information{
+    -fx-background-color: rgba(0,0,0,0.2);
+    -fx-padding: 5;
+}
+
+.visualization-execution-choose-panel  .metadata-name{
+    -fx-text-fill: white;
+}
+
+.visualization-execution-choose-panel  .metadata-type{
+    -fx-text-fill: -az-property-color;
+    -fx-font-family: Consolas;
+}
+
+.visualization-execution-choose-panel .metadata-var-name{
+    -fx-text-fill: white;
+}
+
+.visualization-execution-choose-panel .metadata-var-eqs{
+    -fx-text-fill: rgb(190,150,24);
+}
+
+.visualization-execution-choose-panel .metadata-var-value{
+    -fx-text-fill: -az-console-light-blue;
+}
+
+.visualization-selected-image-wrapper{
+    -fx-border-color: rgb(153,153,153);
+    -fx-border-style: solid;
+    -fx-border-width: 2px;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+    -fx-background-color: rgb(51,51,51);
+}
+
+.execution-select-slider .axis .tick-mark {
+    -fx-font-size: 0.833333em;
+    -fx-fill: -az-console-light-blue;
+}
+
+.visualozation-list-cell-text{
+    -fx-font: 14 Consolas;
+}
+
+
+.vlist .list-cell:odd{
+    -fx-background-color: rgb(142,167,189);
+}
+
+.vlist .list-cell:even{
+    -fx-background-color: rgb(162,187,209);
+}
+
+.vlist .list-cell:selected{
+    -fx-background-color: rgb(92,117,139);
+/*    -fx-effect: innershadow(gaussian, rgb(200,200,200), 10, 0.5, 0, 0);*/
+}
+
+.vlist:focused{
+    -fx-background-color: -fx-box-border, -fx-control-inner-background;
+    -fx-background-insets: 0, 1;
+    -fx-padding: 1; /* 0.083333em; */
+}
+
+.vlist .thumbnail {
+    -fx-border-color: -az-console-light-blue;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Play Screen                                                                 *
+ *                                                                             *
+ ******************************************************************************/
+.now-playing-information-label {
+    -fx-border-color: transparent transparent white transparent;
+    -fx-background-color: rgba(0,0,0,0.6);
+    -fx-text-fill: -az-console-light-blue;
+    -fx-padding: 3;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Media Controls                                                              *
+ *                                                                             *
+ ******************************************************************************/
+.media-controls-wrapper {
+    -fx-border-color: white transparent transparent transparent;
+    -fx-background-color: rgba(0,0,0,0.6);
+}
+
+.media-control{
+    -fx-padding: 5;
+    -fx-background-radius: 20, 20, 20, 20;
+    -fx-border-color: rgb(123,123,123);
+    -fx-border-width: 2;
+    -fx-border-radius: 20,20,20,20;
+    -fx-background-insets: 1, 1, 1, 1;
+}
+
+
+.big-media-control{
+    -fx-border-width: 0;
+    -fx-background-color: rgb(153,153,200);
+    -fx-background-insets: 1, 1, 1, 1;
+}
+
+.big-media-control:hover {
+    -fx-effect: dropshadow( gaussian  , rgb(245,245,245) , 10 , 0.3 , 0 , 0 )
+}
+
+.frame-slider .thumb {
+    -fx-background-color: rgb(153,153,153);
+    -fx-border-color: black;
+        
+    -fx-background-insets: 0;
+    -fx-background-radius: 0; /* makes sure this remains circular */
+    -fx-padding: 0.583333em; /* 7 */
+}
+
+
+.frame-slider .track {
+    -fx-background-color: rgb(153,0,0);
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-padding: 0.208333em; /* 2.5 */
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Computer View                                                               *
+ *                                                                             *
+ ******************************************************************************/
+
+.computer{
+/*    -fx-effect: innershadow(gaussian  , rgb(0,0,0) , 50, 0.5, 0, 0);*/
+/*    -fx-background-color: rgb(0,21,0);*/
+/*    -fx-background-radius: 20;*/
+-fx-border-color: rgb(51,51,11);
+-fx-border-radius: 20;
+-fx-border-insets: -2;
+-fx-border-width: 2;
+}
+
+.computer-code{
+    -fx-text-fill: rgb(0,91,0);
+    -fx-fill: rgb(0,71,0);
+    -fx-font-size: 8;
+}
+
+.percentage-text{
+    -fx-font-family: "Consolas";
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-fill: rgb(51,200,51);
+}
+
+.m-handling-text{
+    -fx-font-family: "Consolas";
+    -fx-font-size: 10;
+    -fx-fill: rgb(100,200,51);
+}
+
+
+.idtext{
+    -fx-font-family: "Verdana";
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+    -fx-fill: coral;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * CPU View                                                                    *
+ *                                                                             *
+ ******************************************************************************/
+.cpu-text{
+    -fx-fill: rgb(91,91,80);
+    -fx-font-weight: bold;
+}

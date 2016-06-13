@@ -1,0 +1,14 @@
+/*
+ * Empty Stylesheet file.
+*/
+
+.canvas {
+    -fx-background-color: rgba(10,21,0,0.6);
+}
+
+.cpu-box{
+/*    -fx-background-radius: 8;*/
+/*    -fx-background-color: rgba(0,0,0,0.6);*/
+/*-fx-border-color: white;*/
+/*-fx-border-radius: 8;*/
+}

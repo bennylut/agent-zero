@@ -1,0 +1,23 @@
+/*
+ * Empty Stylesheet file.
+*/
+
+.back{
+    -fx-background-color: rgb(51,51,51);
+}
+
+.back .label{
+    -fx-font-family: "Consolas";
+    -fx-font-size: 32;
+    -fx-font-weight: bold;
+    -fx-text-fill: rgb(200,200,250);
+    
+}
+
+.dark {
+    -fx-background-color: rgba(0,0,0,0.85);
+}
+
+.light { 
+    -fx-background-color: transparent;
+}
