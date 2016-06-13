@@ -1,26 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>bgu.dcr</groupId>
+    <groupId>com.github.bennylut</groupId>
     <artifactId>agent-zero</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
+    <name>agent-zero</name>
+    <description>DCR Simulator</description>
+    <url>https://github.com/bennylut/agent-zero</url>
+    
+    
+    <developers>
+        <developer>
+            <name>Benny Lutati</name>
+            <email>benny.lutati@gmail.com</email>
+            <organization>BGU</organization>
+            <organizationUrl>http://www.bgu.ac.il</organizationUrl>
+        </developer>
+        
+        <developer>
+            <name>Inna Kaganov</name>
+            <email>inkago@post.bgu.ac.il</email>
+            <organization>BGU</organization>
+            <organizationUrl>http://www.bgu.ac.il</organizationUrl>
+        </developer>
+        
+        <developer>
+            <name>Michael Lando</name>
+            <email>landomic@post.bgu.ac.il</email>
+            <organization>BGU</organization>
+            <organizationUrl>http://www.bgu.ac.il</organizationUrl>
+        </developer>
+        
+        <developer>
+            <name>Vadim Levit</name>
+            <email>levitv@post.bgu.ac.il</email>
+            <organization>BGU</organization>
+            <organizationUrl>http://www.bgu.ac.il</organizationUrl>
+        </developer>
+    </developers>
+    
+    <scm>
+        <connection>scm:git:git@github.com:bennylut/agent-zero</connection>
+        <developerConnection>scm:git:git@github.com:bennylut/agent-zero.git</developerConnection>
+        <url>git@github.com:bennylut/agent-zero.git</url>
+    </scm>
+    
     <modules>
         <module>az-api</module>
         <module>az-core</module>
         <module>az-exec-ui</module>
         <module>az-vis-ui</module>
-        <module>az-runner</module>
+        <!--<module>az-runner</module>-->
     </modules>
+    
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+ 
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+
+ 
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
     
+    <profiles>
+        <profile> 
+            <id>release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>2.2.1</version>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>2.9.1</version>
+                        <executions>
+                            <execution>
+                                <id>attach-javadocs</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        
+                        <configuration>
+                            <failOnError> false </failOnError>
+                            <quiet> true </quiet>
+                            <additionalparam>-Xdoclint:none</additionalparam>
+                        </configuration>
+                    </plugin>
+            
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.5</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+            
+                    <plugin>
+                        <groupId>org.sonatype.plugins</groupId>
+                        <artifactId>nexus-staging-maven-plugin</artifactId>
+                        <version>1.6.3</version>
+                        <extensions>true</extensions>
+                        <configuration>
+                            <serverId>ossrh</serverId>
+                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
     
     <dependencyManagement>
-        
-        <dependencies>
-            
+        <dependencies>          
             <!--DEEP COPY-->
             <dependency>
                 <groupId>com.esotericsoftware</groupId>
@@ -51,10 +179,6 @@
                 <artifactId>jung-graph-impl</artifactId>
                 <version>2.1</version>
             </dependency>
-
-
-
-
 
             <!--RUNTIME CLASS SCAN-->
             <dependency>
@@ -101,7 +225,6 @@
                 <artifactId>jfreechart</artifactId>
                 <version>1.0.19</version>
             </dependency>
-
 
         </dependencies>
     

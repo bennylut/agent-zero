@@ -1,0 +1,2 @@
+mvn clean deploy -P release -s ~/projects/maven/settings.xml
+mvn versions:set -DnewVersion=1.0.0
